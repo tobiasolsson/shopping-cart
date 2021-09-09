@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import Modal from '../modal/Modal';
 
-function Navbar() {
+function Navbar({ shoppingCart }) {
   const [modal, setModal] = useState(false);
 
   function modalOpen() {
@@ -13,6 +13,20 @@ function Navbar() {
   function modalClose() {
     setModal(false);
   }
+
+  function calculateTotal() {
+    const listPrice = shoppingCart.map((item) => item.price);
+    const sumTotal = listPrice.reduce(
+      (currentSum, currentValue) => currentSum + currentValue,
+      0,
+    );
+    return sumTotal;
+  }
+
+  const itemsInCart = shoppingCart.map((item) => {
+    const article = Object.keys(item).map((key) => <li>{item[key]}</li>);
+    return <ul>{article}</ul>;
+  });
 
   return (
     <header>
@@ -47,6 +61,11 @@ function Navbar() {
       </nav>
       <Modal show={modal} handleClose={modalClose}>
         <h2>Hello Modal</h2>
+        {itemsInCart}
+        <ul>
+          <li>Sum Total:</li>
+          <li>{calculateTotal()}</li>
+        </ul>
       </Modal>
     </header>
   );
