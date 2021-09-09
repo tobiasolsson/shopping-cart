@@ -24,7 +24,10 @@ function Navbar({ shoppingCart }) {
   }
 
   const itemsInCart = shoppingCart.map((item) => {
-    const article = Object.keys(item).map((key) => <li>{item[key]}</li>);
+    const relevantInfo = Object.keys(item).filter(
+      (key) => key === 'title' || key === 'price',
+    );
+    const article = relevantInfo.map((key) => <li>{item[key]}</li>);
     return <ul>{article}</ul>;
   });
 
