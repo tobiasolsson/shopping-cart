@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import styles from './Modal.module.css';
+import styles from './CartModal.module.css';
 
-const Modal = ({ handleClose, show, children }) => {
+const CartModal = ({ handleClose, show, children }) => {
   // show modal or hide depending on the className:
   const showModal = show
     ? `${styles.modal} ${styles.showModal}`
@@ -26,4 +26,4 @@ const Modal = ({ handleClose, show, children }) => {
   );
 };
 
-export default Modal;
+export default CartModal;

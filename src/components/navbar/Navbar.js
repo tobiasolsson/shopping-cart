@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
-import Modal from '../modal/Modal';
+import CartModal from '../modal/CartModal';
 
 function Navbar({ shoppingCart }) {
   const [modal, setModal] = useState(false);
@@ -62,14 +62,14 @@ function Navbar({ shoppingCart }) {
           </li>
         </ul>
       </nav>
-      <Modal show={modal} handleClose={modalClose}>
+      <CartModal show={modal} handleClose={modalClose}>
         <h2>Hello Modal</h2>
         {itemsInCart}
         <ul>
-          <li>Sum Total:</li>
+          <li>Summa:</li>
           <li>{calculateTotal()}</li>
         </ul>
-      </Modal>
+      </CartModal>
     </header>
   );
 }

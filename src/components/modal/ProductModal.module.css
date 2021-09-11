@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: #e8e7e6;
+  width: 480px;
+  height: 100%;
+  padding: 16px;
+  right: 0;
+  top: 150px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+.showModal {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hideModal {
+  opacity: 0;
+  transform: translateX(100vh);
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}

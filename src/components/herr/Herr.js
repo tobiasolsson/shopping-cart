@@ -1,21 +1,12 @@
 import React from 'react';
 
+import Card from '../card/Card';
 import { herr } from '../../inventory';
 
 function Herr({ handleAddToCart }) {
-  const menClothing = herr.map((item) => {
-    const article = Object.keys(item).map((key) => <li>{item[key]}</li>);
-    return (
-      <ul>
-        {article}
-        <li>
-          <button type="button" onClick={() => handleAddToCart(item)}>
-            Lägg i varukorgen
-          </button>
-        </li>
-      </ul>
-    );
-  });
+  const menClothing = herr.map((item) => (
+    <Card product={item} handleAddToCart={handleAddToCart} />
+  ));
 
   return (
     <div>
