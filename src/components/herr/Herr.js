@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './Herr.module.css';
+
 import Card from '../card/Card';
 import { herr } from '../../inventory';
 
@@ -10,8 +12,8 @@ function Herr({ handleAddToCart }) {
 
   return (
     <div>
-      <h1>Herr</h1>
-      <div>{menClothing}</div>
+      <h1>Herrkläder</h1>
+      <div className={styles.container}>{menClothing}</div>
     </div>
   );
 }

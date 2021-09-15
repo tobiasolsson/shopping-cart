@@ -19,8 +19,8 @@ function Card({ product }) {
     <div className={styles.card}>
       <div onClick={modalOpen}>
         <img src={product.image} alt="" className={styles.image} />
-        <h3>{product.title}</h3>
-        <p>{product.price}</p>
+        <h3 className={styles.title}>{product.title}</h3>
+        <p className={styles.price}>{product.price.toLocaleString('se')} kr</p>
       </div>
       <ProductModal show={modal} handleClose={modalClose}>
         <h2>Hello Modal</h2>

@@ -1,9 +1,21 @@
 .card {
   width: 300px;
   height: 350px;
-  border: 1px solid black;
+  text-align: center;
 }
+
 .image {
   width: 260px;
   height: 260px;
+  border: 1px solid #e5e5e5;
+}
+
+.title {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.price {
+  margin: 0;
+  margin-top: 10px;
 }

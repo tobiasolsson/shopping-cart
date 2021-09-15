@@ -2,13 +2,18 @@
   position: fixed;
   z-index: 500;
   background-color: #e8e7e6;
-  width: 480px;
-  height: 100%;
+
+  width: 580px;
+  height: 580px;
   padding: 16px;
-  right: 0;
-  top: 150px;
+  right: 500px;
+  top: 300px;
+
   box-sizing: border-box;
+
   transition: all 0.3s ease-out;
+
+  border: 1px solid #c2c2c2;
 }
 
 .showModal {
