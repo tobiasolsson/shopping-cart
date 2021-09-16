@@ -5,7 +5,8 @@ import ProductModal from '../modal/ProductModal';
 
 import styles from './Card.module.css';
 
-function Card({ product }) {
+// TODO: Snygga till <Button>
+function Card({ product, handleAddToCart }) {
   const [modal, setModal] = useState(false);
 
   function modalOpen() {
@@ -15,15 +16,31 @@ function Card({ product }) {
   function modalClose() {
     setModal(false);
   }
+
+  function addToCart() {
+    handleAddToCart(product);
+    modalClose();
+  }
+
+  const productPrice = `${product.price.toLocaleString('se')} kr`;
+
   return (
     <div className={styles.card}>
       <div onClick={modalOpen}>
-        <img src={product.image} alt="" className={styles.image} />
+        <img src={product.image} alt="" className={styles.imageSmall} />
         <h3 className={styles.title}>{product.title}</h3>
-        <p className={styles.price}>{product.price.toLocaleString('se')} kr</p>
+        <p className={styles.price}>{productPrice}</p>
       </div>
       <ProductModal show={modal} handleClose={modalClose}>
-        <h2>Hello Modal</h2>
+        <div>
+          <img src={product.image} alt="" className={styles.imageLarge} />
+          <h3 className={styles.title}>{product.title}</h3>
+          <p className={styles.price}>{productPrice}</p>
+          <p>{product.desc}</p>
+          <button type="button" onClick={addToCart}>
+            Lägg i varukorgen
+          </button>
+        </div>
       </ProductModal>
     </div>
   );

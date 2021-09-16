@@ -4,9 +4,15 @@
   text-align: center;
 }
 
-.image {
+.imageSmall {
   width: 260px;
   height: 260px;
+  border: 1px solid #e5e5e5;
+}
+
+.imageLarge {
+  width: 560px;
+  height: 560px;
   border: 1px solid #e5e5e5;
 }
 
