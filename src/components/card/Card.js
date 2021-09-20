@@ -37,7 +37,7 @@ function Card({ product, handleAddToCart }) {
           <h3 className={styles.title}>{product.title}</h3>
           <p className={styles.price}>{productPrice}</p>
           <p>{product.desc}</p>
-          <button type="button" onClick={addToCart}>
+          <button type="button" onClick={addToCart} className={styles.add}>
             Lägg i varukorgen
           </button>
         </div>

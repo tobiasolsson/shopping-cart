@@ -38,3 +38,11 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.close {
+  margin: 10px;
+  border: 0;
+  background-color: #ffffff00;
+  font-size: 16px;
+  font-weight: 700;
+}

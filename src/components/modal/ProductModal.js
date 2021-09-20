@@ -17,8 +17,8 @@ const ProductModal = ({ handleClose, show, children }) => {
       <div className={showModal}>
         <div>
           {children}
-          <button type="button" onClick={handleClose}>
-            close
+          <button type="button" onClick={handleClose} className={styles.close}>
+            X
           </button>
         </div>
       </div>
