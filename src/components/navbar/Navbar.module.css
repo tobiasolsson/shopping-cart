@@ -142,6 +142,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .summa {
@@ -151,4 +152,35 @@ a {
 .total {
   justify-self: end;
   font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.checkout {
+  background-color: #cc1618;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 4px;
+  text-align: center;
+  width: 120px;
+}
+
+.checkout:hover {
+  display: inline-block;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  background-color: #cc161800;
+  color: #070707;
+  padding: 15px 25px;
+  border-radius: 4px;
+  border: 1px solid #cc1618;
+  justify-self: end;
+  width: 150px;
+  box-sizing: border-box;
 }

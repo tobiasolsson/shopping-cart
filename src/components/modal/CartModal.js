@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './CartModal.module.css';
 
+// eslint-disable-next-line no-unused-vars
 const CartModal = ({ handleClose, show, children }) => {
   // show modal or hide depending on the className:
   const showModal = show
@@ -15,12 +16,7 @@ const CartModal = ({ handleClose, show, children }) => {
     // TODO: Ta bort backdrop div till någon annanstans, eller lös problem med onClick={handleClose} (stänger även när jag klickar på modal)
     <div className={showBackrop}>
       <div className={showModal}>
-        <div>
-          {children}
-          <button type="button" onClick={handleClose}>
-            close
-          </button>
-        </div>
+        <div>{children}</div>
       </div>
     </div>
   );

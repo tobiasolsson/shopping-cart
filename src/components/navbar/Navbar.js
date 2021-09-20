@@ -88,6 +88,14 @@ function Navbar({ shoppingCart }) {
           <li className={styles.summa}>Summa:</li>
           <li className={styles.total}>{calculateTotal()}</li>
         </ul>
+        <div className={styles.buttons}>
+          <Link to="/checkout" className={styles.checkout} onClick={modalClose}>
+            Till kassan
+          </Link>
+          <button type="button" onClick={modalClose} className={styles.close}>
+            Göm Varukorg
+          </button>
+        </div>
       </CartModal>
     </header>
   );
