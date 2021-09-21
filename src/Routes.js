@@ -7,8 +7,9 @@ import Home from './components/home/Home';
 import Dam from './components/dam/Dam';
 import Herr from './components/herr/Herr';
 import Utrustning from './components/utrustning/Utrustning';
+import Checkout from './components/checkout/Checkout';
 
-function Routes({ handleAddToCart }) {
+function Routes({ shoppingCart, handleAddToCart }) {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
@@ -20,6 +21,10 @@ function Routes({ handleAddToCart }) {
         )}
       />
       <Route path="/utrustning" component={Utrustning} />
+      <Route
+        path="/checkout"
+        render={(props) => <Checkout {...props} shoppingCart={shoppingCart} />}
+      />
     </Switch>
   );
 }

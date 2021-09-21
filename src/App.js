@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar shoppingCart={shoppingCart} />
-      <Routes handleAddToCart={handleAddToCart} />
+      <Routes shoppingCart={shoppingCart} handleAddToCart={handleAddToCart} />
     </BrowserRouter>
   );
 }
