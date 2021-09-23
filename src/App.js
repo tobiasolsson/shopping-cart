@@ -12,10 +12,18 @@ function App() {
     setShoppingCart((prev) => [...prev, item]);
   }
 
+  function emptyCart() {
+    setShoppingCart([]);
+  }
+
   return (
     <BrowserRouter>
       <Navbar shoppingCart={shoppingCart} />
-      <Routes shoppingCart={shoppingCart} handleAddToCart={handleAddToCart} />
+      <Routes
+        shoppingCart={shoppingCart}
+        handleAddToCart={handleAddToCart}
+        emptyCart={emptyCart}
+      />
     </BrowserRouter>
   );
 }

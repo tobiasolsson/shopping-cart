@@ -9,7 +9,7 @@ import Herr from './components/herr/Herr';
 import Utrustning from './components/utrustning/Utrustning';
 import Checkout from './components/checkout/Checkout';
 
-function Routes({ shoppingCart, handleAddToCart }) {
+function Routes({ shoppingCart, handleAddToCart, emptyCart }) {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
@@ -23,7 +23,13 @@ function Routes({ shoppingCart, handleAddToCart }) {
       <Route path="/utrustning" component={Utrustning} />
       <Route
         path="/checkout"
-        render={(props) => <Checkout {...props} shoppingCart={shoppingCart} />}
+        render={(props) => (
+          <Checkout
+            {...props}
+            shoppingCart={shoppingCart}
+            emptyCart={emptyCart}
+          />
+        )}
       />
     </Switch>
   );

@@ -1,0 +1,64 @@
+input,
+label {
+  display: block;
+  color: #303030;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+input {
+  border: 1px solid #6d6d6d;
+  border-radius: 5px;
+  color: #3d3d3d;
+  background-color: #fff;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.checkout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 100px;
+}
+
+.orderform {
+  background-color: #f4f4f4;
+}
+
+.name {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr;
+  justify-items: stretch;
+}
+
+.lastname {
+  grid-column-start: 3;
+}
+
+.street input {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.postal {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr;
+  justify-items: stretch;
+}
+
+.city {
+  grid-column-start: 3;
+}
+
+.submit {
+  color: #fbfcfb;
+  background-color: #6c7c57;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  float: right;
+  margin-top: 20px;
+}
