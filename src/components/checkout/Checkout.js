@@ -15,6 +15,43 @@ function Checkout({ shoppingCart, emptyCart }) {
     history.push('/');
   }
 
+  const articles = shoppingCart.length > 1 ? 'artiklar' : 'artikel';
+
+  const summary = shoppingCart.map((item) => {
+    const relevantInfo = Object.keys(item).filter(
+      (key) => key === 'title' || key === 'price' || key === 'image',
+    );
+    const article = relevantInfo.map((key) => {
+      if (key === 'image') {
+        return <img src={item[key]} alt="" className={styles.cartImage} />;
+      }
+      if (key === 'title') {
+        return <li className={styles.title}>{item[key]}</li>;
+      }
+      if (key === 'price') {
+        return (
+          <li className={styles.price}>
+            {`${item[key].toLocaleString('se')} kr`}
+          </li>
+        );
+      }
+      return <li>{item[key]}</li>;
+    });
+    return <ul className={styles.itemCart}>{article}</ul>;
+  });
+
+  function calculateTotal() {
+    const listPrice = shoppingCart.map((item) => item.price);
+    const sumTotal = listPrice.reduce(
+      (currentSum, currentValue) => currentSum + currentValue,
+      0,
+    );
+
+    const totalPrice = `${sumTotal.toLocaleString('se')} kr`;
+
+    return totalPrice;
+  }
+
   return (
     <div className={styles.checkout}>
       <div className={styles.orderform}>
@@ -69,8 +106,16 @@ function Checkout({ shoppingCart, emptyCart }) {
         </form>
       </div>
       <div>
-        <h2>Sammanfattning (x artiklar)</h2>
-        <div>{/* ShoppingCart här */}</div>
+        <h2>
+          Sammanfattning ({shoppingCart.length} {articles})
+        </h2>
+        <div className={styles.summary}>
+          {summary}{' '}
+          <ul className={styles.totalPrice}>
+            <li className={styles.summa}>Summa: </li>
+            <li className={styles.total}>{calculateTotal()}</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -62,3 +62,55 @@ input {
   float: right;
   margin-top: 20px;
 }
+
+.summary {
+  margin: 20px;
+  width: 500px;
+}
+
+.itemCart {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'img title title delete'
+    'img . . .'
+    'img . . price';
+
+  padding: 20px 0;
+  border-bottom: 2px solid #bdbdbdbd;
+}
+
+.cartImage {
+  width: 85px;
+  height: 85px;
+  grid-area: img;
+  justify-self: start;
+}
+
+.title {
+  grid-area: title;
+  justify-self: start;
+}
+
+.price {
+  grid-area: price;
+  justify-self: end;
+  text-align: end;
+  font-weight: 500;
+}
+
+.totalPrice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.summa {
+  justify-self: start;
+}
+
+.total {
+  justify-self: end;
+  font-weight: bold;
+}
