@@ -4,8 +4,6 @@ import { useHistory } from 'react-router-dom';
 import styles from './Checkout.module.css';
 
 function Checkout({ shoppingCart, emptyCart }) {
-  console.log(shoppingCart);
-
   const history = useHistory();
 
   function handleSubmit(e) {
