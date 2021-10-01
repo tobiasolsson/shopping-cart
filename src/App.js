@@ -12,13 +12,18 @@ function App() {
     setShoppingCart((prev) => [...prev, item]);
   }
 
+  function handleRemoveItem(item) {
+    const updatedShoppingCart = shoppingCart.filter((i) => i.id !== item.id);
+    setShoppingCart(updatedShoppingCart);
+  }
+
   function emptyCart() {
     setShoppingCart([]);
   }
 
   return (
     <BrowserRouter>
-      <Navbar shoppingCart={shoppingCart} />
+      <Navbar shoppingCart={shoppingCart} handleRemoveItem={handleRemoveItem} />
       <Routes
         shoppingCart={shoppingCart}
         handleAddToCart={handleAddToCart}

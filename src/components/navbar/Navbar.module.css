@@ -96,6 +96,7 @@ a {
   font-weight: 400;
   margin-right: 10px;
 }
+
 .totalCart {
   font-size: 12px;
   font-weight: 600;
@@ -117,6 +118,18 @@ a {
 
   padding: 20px 0;
   border-bottom: 2px solid #bdbdbdbd;
+}
+
+.delete {
+  border: 0;
+  grid-area: delete;
+  justify-self: end;
+  background-color: #e8e7e6;
+  font-weight: 600;
+}
+
+.delete:hover {
+  color: #ad1d1f;
 }
 
 .cartImage {

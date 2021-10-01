@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
+import uniqid from 'uniqid';
 import ProductModal from '../modal/ProductModal';
 
 import styles from './Card.module.css';
@@ -18,7 +19,7 @@ function Card({ product, handleAddToCart }) {
   }
 
   function addToCart() {
-    handleAddToCart(product);
+    handleAddToCart({ ...product, id: uniqid() });
     modalClose();
   }
 

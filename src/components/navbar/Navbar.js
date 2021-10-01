@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import CartModal from '../modal/CartModal';
 
-function Navbar({ shoppingCart }) {
+function Navbar({ shoppingCart, handleRemoveItem }) {
   const [modal, setModal] = useState(false);
 
   function modalOpen() {
@@ -44,9 +44,20 @@ function Navbar({ shoppingCart }) {
           </li>
         );
       }
-      return <li>{item[key]}</li>;
+      return <li>Oops...</li>;
     });
-    return <ul className={styles.itemCart}>{article}</ul>;
+    return (
+      <ul className={styles.itemCart}>
+        <button
+          className={styles.delete}
+          type="button"
+          onClick={() => handleRemoveItem(item)}
+        >
+          X
+        </button>
+        {article}
+      </ul>
+    );
   });
 
   return (
