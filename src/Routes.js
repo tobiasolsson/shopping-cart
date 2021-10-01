@@ -13,14 +13,22 @@ function Routes({ shoppingCart, handleAddToCart, emptyCart }) {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/dam" component={Dam} />
+      <Route
+        path="/dam"
+        render={(props) => <Dam {...props} handleAddToCart={handleAddToCart} />}
+      />
       <Route
         path="/herr"
         render={(props) => (
           <Herr {...props} handleAddToCart={handleAddToCart} />
         )}
       />
-      <Route path="/utrustning" component={Utrustning} />
+      <Route
+        path="/utrustning"
+        render={(props) => (
+          <Utrustning {...props} handleAddToCart={handleAddToCart} />
+        )}
+      />
       <Route
         path="/checkout"
         render={(props) => (
