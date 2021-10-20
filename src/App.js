@@ -13,7 +13,9 @@ function App() {
   }
 
   function handleRemoveItem(item) {
-    const updatedShoppingCart = shoppingCart.filter((i) => i.id !== item.id);
+    const updatedShoppingCart = shoppingCart.filter(
+      (oldItem) => oldItem.id !== item.id,
+    );
     setShoppingCart(updatedShoppingCart);
   }
 

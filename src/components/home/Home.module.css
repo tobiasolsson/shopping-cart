@@ -1,0 +1,51 @@
+.landing {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  justify-items: center;
+}
+
+.mainImg {
+  background-image: url('../../assets/images/landing/main.webp');
+  width: 100%;
+  height: 900px;
+  background-position: center;
+  grid-column: 1 / 4;
+}
+
+.herrImg,
+.damImg,
+.utrImg,
+.mainImg {
+  background-repeat: no-repeat;
+  color: #ffffff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.herrImg,
+.damImg,
+.utrImg {
+  height: 382px;
+  width: 382px;
+}
+
+.imageText {
+  /* text-align: center; */
+  font-size: 34px;
+  text-shadow: 1px 0 0 #0000002f, 0 -1px 0 #0000002f, 0 1px 0 #0000002f,
+    -1px 0 0 #0000002f;
+}
+
+.herrImg {
+  background-image: url('../../assets/images/landing/herr.webp');
+}
+
+.damImg {
+  background-image: url('../../assets/images/landing/dam.webp');
+}
+
+.utrImg {
+  background-image: url('../../assets/images/landing/rygg.webp');
+}

@@ -10,7 +10,7 @@ function Checkout({ shoppingCart, emptyCart }) {
     e.preventDefault();
     // Redirect till landing page
     emptyCart();
-    history.push('/');
+    history.push('/', 'checked');
   }
 
   const articles = shoppingCart.length > 1 ? 'artiklar' : 'artikel';
