@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Routes from './Routes';
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
@@ -31,6 +32,7 @@ function App() {
         handleAddToCart={handleAddToCart}
         emptyCart={emptyCart}
       />
+      <Footer />
     </BrowserRouter>
   );
 }
