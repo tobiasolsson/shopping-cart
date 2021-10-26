@@ -15,7 +15,7 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
   }
 
   function calculateTotal() {
-    const listPrice = shoppingCart.map((item) => item.price);
+    const listPrice = shoppingCart.map((item) => item.price * item.qty);
     const sumTotal = listPrice.reduce(
       (currentSum, currentValue) => currentSum + currentValue,
       0,
@@ -24,6 +24,14 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
     const totalPrice = `${sumTotal.toLocaleString('se')} kr`;
 
     return totalPrice;
+  }
+
+  function calculateItemsInCart() {
+    const totalItems = shoppingCart
+      .map((item) => item.qty)
+      .reduce((a, b) => a + b, 0);
+
+    return totalItems;
   }
 
   const itemsInCart = shoppingCart.map((item) => {
@@ -59,7 +67,7 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
       if (key === 'price') {
         return (
           <li className={styles.price}>
-            {`${item[key].toLocaleString('se')} kr`}
+            {`${(item[key] * item.qty).toLocaleString('se')} kr`}
           </li>
         );
       }
@@ -108,7 +116,9 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
           </li>
           <li className={styles.varukorg}>
             <button type="button" onClick={modalOpen}>
-              <span className={styles.numberItems}>{shoppingCart.length}</span>
+              <span className={styles.numberItems}>
+                {calculateItemsInCart()}
+              </span>
               <span className={styles.totalCart}>{calculateTotal()}</span>
             </button>
           </li>
