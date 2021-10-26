@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import CartModal from '../modal/CartModal';
 
-function Navbar({ shoppingCart, handleRemoveItem }) {
+function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
   const [modal, setModal] = useState(false);
 
   function modalOpen() {
@@ -29,7 +29,7 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
   function calculateItemsInCart() {
     const totalItems = shoppingCart
       .map((item) => item.qty)
-      .reduce((a, b) => a + b, 0);
+      .reduce((a, b) => a + b);
 
     return totalItems;
   }
@@ -51,16 +51,29 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
     // Ta fram rätt info som behövs i varukorg
     const article = relevantInfo.map((key) => {
       if (key === 'image') {
-        return <img src={item[key]} alt="" className={styles.cartImage} />;
+        return <img src={item.image} alt="" className={styles.cartImage} />;
       }
       if (key === 'title') {
-        return <li className={styles.title}>{item[key]}</li>;
+        return <li className={styles.title}>{item.title}</li>;
       }
       if (key === 'qty') {
         return (
           <ul>
             <li>Qty:</li>
-            <li>{item[key]}</li>
+            <li>
+              <select onChange={(e) => handleQuantityChange(e, item)}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </li>
           </ul>
         );
       }

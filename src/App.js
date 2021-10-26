@@ -35,13 +35,26 @@ function App() {
     setShoppingCart(updatedShoppingCart);
   }
 
+  function handleQuantityChange(e, item) {
+    const updatedShoppingCart = shoppingCart.map((oldItem) =>
+      oldItem.title === item.title
+        ? { ...oldItem, qty: e.target.value }
+        : oldItem,
+    );
+    setShoppingCart(updatedShoppingCart);
+  }
+
   function emptyCart() {
     setShoppingCart([]);
   }
 
   return (
     <BrowserRouter>
-      <Navbar shoppingCart={shoppingCart} handleRemoveItem={handleRemoveItem} />
+      <Navbar
+        shoppingCart={shoppingCart}
+        handleRemoveItem={handleRemoveItem}
+        handleQuantityChange={handleQuantityChange}
+      />
       <Routes
         shoppingCart={shoppingCart}
         handleAddToCart={handleAddToCart}
