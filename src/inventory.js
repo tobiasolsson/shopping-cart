@@ -50,6 +50,7 @@ export const herr = [
     price: 999,
     color: 'Grey-Melange',
     desc: 'Skön huvtröja i ekologisk bomullsjersey för både vardag och fritid.',
+    qty: 0,
   },
   {
     image: ladaRoundNeckH,
@@ -58,6 +59,7 @@ export const herr = [
     price: 1899,
     color: 'Bogwood Brown',
     desc: 'Klassisk stickad tröja i lammullsblandning. Värmer både på vandring och till vardags.',
+    qty: 0,
   },
   {
     image: ovikNordicSweaterH,
@@ -66,6 +68,7 @@ export const herr = [
     price: 1899,
     color: 'Chalk White',
     desc: 'Mönsterstickad tröja i spårbar ull. Mjuk och varm för höstens och vinterns uteliv.',
+    qty: 0,
   },
   {
     image: kebEcoShellDuskH,
@@ -74,6 +77,7 @@ export const herr = [
     price: 5499,
     color: 'Dusk',
     desc: 'Högfunktionell trelagers skaljacka i stretchig Eco-Shell. Minimalistisk utformning med fast huva, lättillgängliga bröstfickor och ventilation i sidan.',
+    qty: 0,
   },
   {
     image: ExpeditionXH,
@@ -82,6 +86,7 @@ export const herr = [
     price: 2299,
     color: 'Deep Forest',
     desc: 'Lätt förstärkningsjacka med syntetfyllning för vandring och friluftsliv, året runt.',
+    qty: 0,
   },
   {
     image: visby3in1H,
@@ -90,6 +95,7 @@ export const herr = [
     price: 6999,
     color: 'Dark Navy',
     desc: 'Vattentät allvädersjacka med löstagbar syntetfodrad innerjacka. Praktisk året runt.',
+    qty: 0,
   },
   {
     image: gaiterH,
@@ -98,6 +104,7 @@ export const herr = [
     price: 3600,
     color: 'Orange Waves',
     desc: 'En löst sittande version av den slitstarka Gaiter No.1 byxan, nu i lättare G-1000 Air.',
+    qty: 0,
   },
   {
     image: kaipakH,
@@ -106,6 +113,7 @@ export const herr = [
     price: 1799,
     color: 'Dark Grey-Black',
     desc: 'Slitstark vandringsbyxa för fjällturen i G-1000 Eco med stretchpaneler.',
+    qty: 0,
   },
   {
     image: karlH,
@@ -114,6 +122,7 @@ export const herr = [
     price: 1699,
     color: 'Clay Blue',
     desc: 'Slitstark friluftsbyxa med Regular fit i borstad G-1000 Silent. Teknisk skärning ger extra rörelsefrihet och det finns sex praktiska fickor.',
+    qty: 0,
   },
 ];
 
@@ -125,6 +134,7 @@ export const dam = [
     price: 999,
     color: 'Mesa Purple',
     desc: 'Klassisk sweatshirt i härligt robust Felpa-jersey av ekobomull.',
+    qty: 0,
   },
   {
     image: ovikKnitSweaterW,
@@ -133,6 +143,7 @@ export const dam = [
     price: 1799,
     color: 'Arctic Green',
     desc: 'Vackert mönsterstickad tröja i mjuk, varm ull. Rund halsringning, välsittande raglanskärning och förstärkning på armbågarna.',
+    qty: 0,
   },
   {
     image: visbySweaterW,
@@ -141,6 +152,7 @@ export const dam = [
     price: 2799,
     color: 'Grey',
     desc: 'Robust stickad tröja i svensk ull, perfekt för vardag och uteliv i kyligt väder.',
+    qty: 0,
   },
   {
     image: ExpeditionXW,
@@ -149,6 +161,7 @@ export const dam = [
     price: 2299,
     color: 'Deep Forest',
     desc: 'Lätt förstärkningsjacka med syntetfyllning för vandring och friluftsliv, året runt.',
+    qty: 0,
   },
   {
     image: kebEcoShellW,
@@ -157,6 +170,7 @@ export const dam = [
     price: 5499,
     color: 'Dark Navy',
     desc: 'Högfunktionell trelagers skaljacka i stretchig Eco-Shell. Minimalistisk utformning med fast huva, lättillgängliga bröstfickor och ventilation i sidan.',
+    qty: 0,
   },
   {
     image: stinaJacketW,
@@ -165,6 +179,7 @@ export const dam = [
     price: 2199,
     color: 'Raspberry Red',
     desc: 'Skön och praktisk vardagsjacka i slitstark G-1000 Original och G-1000 Lite. Fast huva och två handfickor.',
+    qty: 0,
   },
   {
     image: abiskoTrekkingTightsW,
@@ -173,6 +188,7 @@ export const dam = [
     price: 1899,
     color: 'Deep Forest',
     desc: 'Tekniska vandringstights i tåligt och högfunktionellt stretchmaterial. Praktiska fickor och förstärkningar som ger extra stryktålighet i tuff terräng.',
+    qty: 0,
   },
   {
     image: karlaProTrousersW,
@@ -181,6 +197,7 @@ export const dam = [
     price: 1699,
     color: 'blue',
     desc: 'Slitstark friluftsbyxa med Regular fit i borstad G-1000 Silent. Teknisk skärning ger extra rörelsefrihet och det finns sex praktiska fickor.',
+    qty: 0,
   },
   {
     image: kebTrousersW,
@@ -189,6 +206,7 @@ export const dam = [
     price: 2299,
     color: 'Port-Mesa Purple',
     desc: 'Teknisk vandringsbyxa i stretch och G-1000 Eco, perfekt för långa dagar ute på fjället.',
+    qty: 0,
   },
 ];
 
@@ -200,6 +218,7 @@ export const utrustning = [
     price: 1799,
     color: 'Stoen Grey',
     desc: 'Avskalad, robust vandringsryggsäck i G-1000 HeavyDuty Eco. Toppmatat huvudfack, frontficka och avtagbar midjerem.',
+    qty: 0,
   },
   {
     image: keb72,
@@ -208,6 +227,7 @@ export const utrustning = [
     price: 3699,
     color: 'Olive-Deep Forest',
     desc: 'Ergonomisk, rejäl fyra säsongers ryggsäck för långa turer till fots och på skidor.',
+    qty: 0,
   },
   {
     image: singi20,
@@ -216,6 +236,7 @@ export const utrustning = [
     price: 1099,
     color: 'Cabin Red',
     desc: 'Slitstark dagtursryggsäck. Praktisk och flexibel för vandring, jakt och fiske.',
+    qty: 0,
   },
   {
     image: jaervBottle,
@@ -224,6 +245,7 @@ export const utrustning = [
     price: 649,
     color: 'Ljus Läder',
     desc: 'HELAGS är tillverkad i vakuum-isolerat rostfritt stål av hög kvalitet (18/8). Tar inte upp smaker, håller din dryck varm i 8 timmar och kall i 24 timmar.',
+    qty: 0,
   },
   {
     image: thermos,
@@ -232,6 +254,7 @@ export const utrustning = [
     price: 399,
     color: 'Rostfritt stål',
     desc: 'Ståltermos av absolut högsta kvalitet. Tillverkad i rostfritt fjäderstål med unik patenterad vakuumiseringsteknik. Patenterad hygienisk autokork som är delbar för enkel rengöring.',
+    qty: 0,
   },
   {
     image: stanley,
@@ -240,6 +263,7 @@ export const utrustning = [
     price: 799,
     color: 'Hammertone Green',
     desc: 'Klassisk grön termos från Stanley som rymmer ordentligt med kaffe! Håller din dryck varm i upp till 45 timmar och kall i upp till 2 dagar. Den är läckage- och diskmaskinssäker.',
+    qty: 0,
   },
   {
     image: mimerStove,
@@ -248,6 +272,7 @@ export const utrustning = [
     price: 599,
     color: 'Aluminium',
     desc: 'Smidigt friluftskök med brännare, två kastruller, stekpanna och griptång. Det är pålitligt och lättanvänt, vilket gör att det passar perfekt till familjeutflykten, bil- eller båtturen.',
+    qty: 0,
   },
   {
     image: primesEssential,
@@ -256,6 +281,7 @@ export const utrustning = [
     price: 1199,
     color: 'Aluminium',
     desc: '  Kompakt och stadigt gaskök med brännare, två kastruller och en stekpanna. Passar perfekt för dig som enkelt vill laga mat ute i det fria, oavsett om du ska på picknick eller ut på en längre vandring.',
+    qty: 0,
   },
   {
     image: primeteckStove,
@@ -264,5 +290,6 @@ export const utrustning = [
     price: 1699,
     color: 'Hårdanodiserat aluminium',
     desc: 'Effektivt och stabilt gaskök med integrerad brännare i vindskyddet. En kastrull med värmeväxlare och keramisk insida, en kastrull i hårdanodiserat aluminium och lock med integrerat durkslag.',
+    qty: 0,
   },
 ];

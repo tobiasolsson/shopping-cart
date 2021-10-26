@@ -10,12 +10,27 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
 
   function handleAddToCart(item) {
-    setShoppingCart((prev) => [...prev, item]);
+    if (shoppingCart.length === 0) {
+      setShoppingCart([{ ...item, qty: 1 }]);
+    }
+    if (shoppingCart.length >= 1) {
+      const updatedQty = shoppingCart.map((el) =>
+        el.title === item.title ? { ...el, qty: el.qty + 1 } : el,
+      );
+      // om item.title INTE finns i shoppingCart
+      // lägg till den i updatedCart med qty: 1
+      const addToCart = { ...item, qty: 1 };
+      const updatedCart = shoppingCart.some((el) => el.title === item.title)
+        ? [...updatedQty]
+        : [...updatedQty, addToCart];
+
+      setShoppingCart([...updatedCart]);
+    }
   }
 
   function handleRemoveItem(item) {
     const updatedShoppingCart = shoppingCart.filter(
-      (oldItem) => oldItem.id !== item.id,
+      (oldItem) => oldItem.title !== item.title,
     );
     setShoppingCart(updatedShoppingCart);
   }

@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
-import uniqid from 'uniqid';
+// import uniqid from 'uniqid';
 import ProductModal from '../modal/ProductModal';
 
 import styles from './Card.module.css';
 
-// TODO: Snygga till <Button>
 function Card({ product, handleAddToCart }) {
   const [modal, setModal] = useState(false);
 
@@ -19,7 +18,8 @@ function Card({ product, handleAddToCart }) {
   }
 
   function addToCart() {
-    handleAddToCart({ ...product, id: uniqid() });
+    // handleAddToCart({ ...product, id: uniqid() });
+    handleAddToCart(product);
     modalClose();
   }
 

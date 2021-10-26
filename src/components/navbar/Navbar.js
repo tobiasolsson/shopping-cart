@@ -27,15 +27,34 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
   }
 
   const itemsInCart = shoppingCart.map((item) => {
+    // Mappa upp hur många av var enskild artikel jag har
+    // const quantity = 0;
+
+    // gör en quantity selector med förvalt korrekt antal
+    // priset bör vara korrekt ändå?
+    // ändra pris när jag ändrar qty! (separat function handleQtyChange)
+
+    // Lista på vilken info som vi vill ha från artikeln
     const relevantInfo = Object.keys(item).filter(
-      (key) => key === 'title' || key === 'price' || key === 'image',
+      (key) =>
+        key === 'title' || key === 'price' || key === 'image' || key === 'qty',
     );
+
+    // Ta fram rätt info som behövs i varukorg
     const article = relevantInfo.map((key) => {
       if (key === 'image') {
         return <img src={item[key]} alt="" className={styles.cartImage} />;
       }
       if (key === 'title') {
         return <li className={styles.title}>{item[key]}</li>;
+      }
+      if (key === 'qty') {
+        return (
+          <ul>
+            <li>Qty:</li>
+            <li>{item[key]}</li>
+          </ul>
+        );
       }
       if (key === 'price') {
         return (
@@ -46,6 +65,8 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
       }
       return <li>Oops...</li>;
     });
+
+    // Spotta ut artikel HTML
     return (
       <ul className={styles.itemCart}>
         <button
@@ -55,6 +76,7 @@ function Navbar({ shoppingCart, handleRemoveItem }) {
         >
           X
         </button>
+
         {article}
       </ul>
     );
