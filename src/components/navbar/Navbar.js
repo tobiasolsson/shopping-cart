@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import CartModal from '../modal/CartModal';
@@ -31,8 +31,14 @@ function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
       .map((item) => item.qty)
       .reduce((a, b) => a + b);
 
+    console.log(totalItems);
+
     return totalItems;
   }
+
+  useEffect(() => {
+    calculateItemsInCart();
+  }, [shoppingCart]);
 
   const itemsInCart = shoppingCart.map((item) => {
     // Mappa upp hur många av var enskild artikel jag har
@@ -61,7 +67,10 @@ function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
           <ul>
             <li>Qty:</li>
             <li>
-              <select onChange={(e) => handleQuantityChange(e, item)}>
+              <select
+                onChange={(e) => handleQuantityChange(e, item)}
+                value={item.qty}
+              >
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

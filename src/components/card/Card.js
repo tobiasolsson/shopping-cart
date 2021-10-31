@@ -8,6 +8,7 @@ import styles from './Card.module.css';
 
 function Card({ product, handleAddToCart }) {
   const [modal, setModal] = useState(false);
+  const [quant, setQty] = useState(1);
 
   function modalOpen() {
     setModal(true);
@@ -19,7 +20,7 @@ function Card({ product, handleAddToCart }) {
 
   function addToCart() {
     // handleAddToCart({ ...product, id: uniqid() });
-    handleAddToCart(product);
+    handleAddToCart({ ...product, qty: quant });
     modalClose();
   }
 
@@ -38,6 +39,25 @@ function Card({ product, handleAddToCart }) {
           <h3 className={styles.title}>{product.title}</h3>
           <p className={styles.price}>{productPrice}</p>
           <p>{product.desc}</p>
+          <ul>
+            <li>Qty:</li>
+            <li>
+              <select onChange={(e) => setQty(+e.target.value)}>
+                <option value="1" selected>
+                  1
+                </option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </li>
+          </ul>
           <button type="button" onClick={addToCart} className={styles.add}>
             Lägg i varukorgen
           </button>
