@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   z-index: 500;
   background-color: #e8e7e6;
   width: 480px;
@@ -33,15 +33,8 @@
 
 @media screen and (max-width: 600px) {
   .modal {
-    position: absolute;
-    z-index: 500;
-    background-color: #e8e7e6;
     width: 100%;
     height: 100%;
-    padding: 16px;
-    right: 0;
     top: 0;
-    box-sizing: border-box;
-    transition: all 0.3s ease-out;
   }
 }

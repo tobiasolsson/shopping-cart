@@ -43,3 +43,22 @@
   transform: translateY(-1px);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 150px;
+    height: 250px;
+    text-align: center;
+  }
+
+  .imageSmall {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #e5e5e5;
+  }
+
+  .imageLarge {
+    width: 250px;
+    height: 250px;
+  }
+}
