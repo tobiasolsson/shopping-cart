@@ -31,12 +31,12 @@ function Home({ location }) {
         </div>
         <Link to="/herr">
           <div className={styles.herrImg}>
-            <h2 className={styles.imageText}>Köp herr kläder</h2>
+            <h2 className={styles.imageText}>Köp herrkläder</h2>
           </div>
         </Link>
         <Link to="/dam">
           <div className={styles.damImg}>
-            <h2 className={styles.imageText}>Köp dam kläder</h2>
+            <h2 className={styles.imageText}>Köp damkläder</h2>
           </div>
         </Link>
         <Link to="/utrustning">

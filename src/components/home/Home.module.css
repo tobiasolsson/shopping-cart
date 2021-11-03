@@ -32,7 +32,7 @@
 }
 
 .imageText {
-  /* text-align: center; */
+  text-align: center;
   font-size: 34px;
   text-shadow: 1px 0 0 #0000002f, 0 -1px 0 #0000002f, 0 1px 0 #0000002f,
     -1px 0 0 #0000002f;
@@ -48,4 +48,31 @@
 
 .utrImg {
   background-image: url('../../assets/images/landing/rygg.webp');
+}
+
+@media screen and (max-width: 600px) {
+  .landing {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .mainImg {
+    background-image: none;
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .herrImg,
+  .damImg,
+  .utrImg {
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+  }
 }
