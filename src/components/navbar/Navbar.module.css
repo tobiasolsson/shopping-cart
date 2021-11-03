@@ -54,6 +54,7 @@ a {
 
 .varukorg {
   padding-left: 100px;
+  width: 100px;
 }
 
 .navbar {
@@ -196,4 +197,60 @@ a {
   justify-self: end;
   width: 150px;
   box-sizing: border-box;
+}
+
+/* 
+** Mobile 
+*/
+
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  .menu {
+    border: 0;
+    background-color: #00000000;
+  }
+  .hamburger {
+    position: relative;
+    display: inline-block;
+    width: 1.25em;
+    height: 0.8em;
+    margin-right: 0.3em;
+    border-top: 0.2em solid #000000;
+    border-bottom: 0.2em solid #000000;
+  }
+
+  .hamburger:before {
+    content: '';
+    position: absolute;
+    top: 0.3em;
+    left: 0px;
+    width: 100%;
+    border-top: 0.2em solid #000000;
+  }
+
+  .hideMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    background-color: #e8e7e6;
+    width: 50%;
+    height: 100%;
+    padding: 16px;
+    left: 0;
+    top: 134px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    box-sizing: border-box;
+  }
+
+  .mobileGrid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
 }

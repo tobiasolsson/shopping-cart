@@ -6,6 +6,8 @@ import CartModal from '../modal/CartModal';
 function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
   const [modal, setModal] = useState(false);
 
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   function modalOpen() {
     setModal(true);
   }
@@ -112,10 +114,21 @@ function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
     );
   });
 
+  function toggleMobliMenu() {
+    setMobileMenu(!mobileMenu);
+  }
+
+  const showMobileMenu = mobileMenu
+    ? `${styles.mobileMenu} ${styles.mobileGrid}`
+    : `${styles.mobileMenu} ${styles.hideMenu}`;
+
   return (
     <header>
       <nav className={styles.navbar}>
-        <ul>
+        <button type="button" className={styles.menu} onClick={toggleMobliMenu}>
+          <span className={styles.hamburger} />
+        </button>
+        <ul className={showMobileMenu}>
           <li>
             <Link to="/">
               <h1 className={styles.logo}>Outdoor</h1>
@@ -136,16 +149,15 @@ function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
               Utrustning
             </NavLink>
           </li>
-          <li className={styles.varukorg}>
-            <button type="button" onClick={modalOpen}>
-              <span className={styles.numberItems}>
-                {calculateItemsInCart()}
-              </span>
-              <span className={styles.totalCart}>{calculateTotal()}</span>
-            </button>
-          </li>
         </ul>
+        <div className={styles.varukorg}>
+          <button type="button" onClick={modalOpen}>
+            <span className={styles.numberItems}>{calculateItemsInCart()}</span>
+            <span className={styles.totalCart}>{calculateTotal()}</span>
+          </button>
+        </div>
       </nav>
+
       <CartModal show={modal} handleClose={modalClose}>
         <h2 className={styles.dinVarukorg}>Din varukorg</h2>
         {itemsInCart}
