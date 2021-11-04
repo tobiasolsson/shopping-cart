@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import Routes from './Routes';
 import Navbar from './components/navbar/Navbar';
@@ -41,7 +41,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar
         shoppingCart={shoppingCart}
         handleRemoveItem={handleRemoveItem}
@@ -53,7 +53,7 @@ function App() {
         emptyCart={emptyCart}
       />
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
