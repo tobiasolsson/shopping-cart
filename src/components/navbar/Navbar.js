@@ -29,11 +29,13 @@ function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
   }
 
   function calculateItemsInCart() {
+    if (!shoppingCart.length) {
+      return 0;
+    }
+
     const totalItems = shoppingCart
       .map((item) => item.qty)
       .reduce((a, b) => a + b);
-
-    console.log(totalItems);
 
     return totalItems;
   }

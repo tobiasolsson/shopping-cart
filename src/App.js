@@ -7,7 +7,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 
 function App() {
-  const [shoppingCart, setShoppingCart] = useState([{ qty: 0, price: 0 }]);
+  const [shoppingCart, setShoppingCart] = useState([]);
 
   function handleAddToCart(item) {
     const updatedQty = shoppingCart.map((el) =>
