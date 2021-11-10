@@ -199,6 +199,10 @@ a {
   box-sizing: border-box;
 }
 
+.menu {
+  display: none;
+}
+
 /* 
 ** Mobile 
 */
@@ -206,6 +210,7 @@ a {
 /* On screens that are 600px or less */
 @media screen and (max-width: 600px) {
   .menu {
+    display: inline;
     border: 0;
     background-color: #00000000;
   }

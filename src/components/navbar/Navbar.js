@@ -132,22 +132,34 @@ function Navbar({ shoppingCart, handleRemoveItem, handleQuantityChange }) {
         </button>
         <ul className={showMobileMenu}>
           <li>
-            <Link to="/">
+            <Link to="/" onClick={() => setMobileMenu(false)}>
               <h1 className={styles.logo}>Outdoor</h1>
             </Link>
           </li>
           <li className={styles.kategori}>
-            <NavLink activeClassName={styles.aktiv} to="/dam">
+            <NavLink
+              activeClassName={styles.aktiv}
+              to="/dam"
+              onClick={() => setMobileMenu(false)}
+            >
               Dam
             </NavLink>
           </li>
           <li className={styles.kategori}>
-            <NavLink activeClassName={styles.aktiv} to="/herr">
+            <NavLink
+              activeClassName={styles.aktiv}
+              to="/herr"
+              onClick={() => setMobileMenu(false)}
+            >
               Herr
             </NavLink>
           </li>
           <li className={styles.kategori}>
-            <NavLink activeClassName={styles.aktiv} to="/utrustning">
+            <NavLink
+              activeClassName={styles.aktiv}
+              to="/utrustning"
+              onClick={() => setMobileMenu(false)}
+            >
               Utrustning
             </NavLink>
           </li>
